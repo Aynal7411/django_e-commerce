@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block title %}My Addresses{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2 class="mb-4">📍 My Saved Addresses</h2>
+
+    {% if addresses %}
+        <div class="row">
+            {% for address in addresses %}
+                <div class="col-md-6">
+                    <div class="card mb-3 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ address.full_name }}</h5>
+                            <p class="card-text">
+                                {{ address.street_address }} <br>
+                                {{ address.city }}, {{ address.state }} - {{ address.zip_code }} <br>
+                                {{ address.country }}
+                            </p>
+                            <p class="text-muted">
+                                📞 {{ address.phone }}
+                            </p>
+                            <a href="{% url 'address_create' address.id %}" class="btn btn-sm btn-primary">Edit</a>
+                            <a href="{% url 'address_delete' address.id %}" class="btn btn-sm btn-danger">Delete</a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <p class="alert alert-info">You have no saved addresses yet.</p>
+    {% endif %}
+
+    <a href="{% url 'address_add' %}" class="btn btn-success mt-3">➕ Add New Address</a>
+</div>
+{% endblock %}
