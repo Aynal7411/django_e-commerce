@@ -1,0 +1,47 @@
+<!-- Footer -->
+<footer class="footer mt-5">
+    <div class="container">
+        <div class="row text-white py-4">
+            
+            <!-- About -->
+            <div class="col-md-4 mb-3">
+                <h5>About Rice Vandar</h5>
+                <p>Rice Vandar is your one-stop shop for premium quality rice. We provide fresh and nutritious rice directly from farms to your kitchen.</p>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="col-md-4 mb-3">
+                <h5>Quick Links</h5>
+                <ul class="list-unstyled">
+                    <li><a href="{% url 'catalogue:product_list' %}">Products</a></li>
+                    <li><a href="{% url 'catalogue:category_products' 1 %}">Categories</a></li>
+                    <li><a href="{% url 'cart:cart_detail' %}">Cart</a></li>
+                    <li><a href="{% url 'accounts:login' %}">Login</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="col-md-4 mb-3">
+                <h5>Contact Us</h5>
+                <ul class="list-unstyled">
+                    <li>Email: support@ricevandar.com</li>
+                    <li>Phone: +880 123 456 789</li>
+                    <li>Address: Dhaka, Bangladesh</li>
+                </ul>
+                <div class="social-icons mt-2">
+                    <a href="#" class="text-white me-2"><i class="bi bi-facebook"></i></a>
+                    <a href="#" class="text-white me-2"><i class="bi bi-twitter"></i></a>
+                    <a href="#" class="text-white me-2"><i class="bi bi-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <hr class="bg-white">
+
+        <div class="row text-center">
+            <div class="col-12">
+                <p class="mb-0">&copy; {{ year }} Rice Vandar. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+</footer>
