@@ -25,6 +25,7 @@
               <li class="nav-item"><a class="nav-link" href="{% url 'accounts:login' %}">Login</a></li>
               <li class="nav-item"><a class="nav-link" href="{% url 'accounts:register' %}">Register</a></li>
             {% endif %}
+            <li class="nav-item"><a class="nav-link" href="{% url 'cart:view_cart' %}">Cart ({{ cart_item_count }})</a></li>
           </ul>
         </div>
       </div>
