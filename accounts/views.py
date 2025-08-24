@@ -16,7 +16,7 @@ def register(request):
           user = form.save()
           login(request, user)
           messages.success(request, "Account created successfully!")
-          return redirect("catalog:product_list")
+          return redirect("catalogue:product_list")
    else:
       form = UserRegisterForm()
    return render(request, "accounts/register.html", {"form": form})
