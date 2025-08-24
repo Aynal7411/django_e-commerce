@@ -1,0 +1,8 @@
+<h2>Checkout</h2>
+
+<p>Total Amount: {{ cart.total_price }}</p>
+
+<form method="post">
+    {% csrf_token %}
+    <button type="submit">Confirm Order</button>
+</form>
